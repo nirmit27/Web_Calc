@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(238, 193, 193);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+    margin-bottom: 60px;
+    font-size: 3rem;
+    color: whitesmoke;
+    background-color: blue;
+    width: 100vw;
+}
+
+#module{
+    height: 70vh;
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(2px 2px 15px blueviolet);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 15px;
+    padding: 10px;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(140px, auto) repeat(5, 70px);
+}
+
+.calculator-grid > button {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: whitesmoke solid 1px;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgba(182, 172, 172, 0.75);
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(165, 151, 151, 0.9);
+}
+
+#equals {
+    grid-column: span 2;
+    color: white;
+    background-color: blueviolet;
+}
+
+#equals:hover{
+    color: white;
+    background-color: blue;
+}
+
+#equals:active{
+    color:blue;
+    background-color: white;
+    border: solid blue 1px;
+}
+
+#ac{
+    background-color: rgb(102, 144, 40);
+    color: white;
+}
+
+#ac:hover{
+    color: rgb(102, 144, 40);
+    background-color: black;
+}
+
+#ac:active{
+    color: black;
+    background-color: white;
+    border: solid 1px rgb(102, 144, 40);
+}
+
+#del{
+    background-color: red;
+    color: white;
+}
+
+#del:hover{
+    color: red;
+    background-color: black;
+}
+
+#del:active{
+    color: darkred;
+    background-color: white;
+    border: solid 1px red;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(226, 211, 211, 0.75);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    display: flex;
+    height: 20px;
+    justify-content: flex-start;
+    color: rgba(82, 78, 78, 0.75);
+    font-size: 1.1rem;
+    font-family: monospace, sans-serif;
+    font-weight: 500;
+}
+
+.output .current-operand {
+    display: flex;
+    justify-content: flex-end;
+    color: black;
+    font-size: 2.5rem;
+    font-family: monospace, sans-serif;
+    font-weight: 600;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 20px;
+    height: 100px;
+    width: 100vw;
+    color: whitesmoke;
+    font-family: monospace, sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    background-color: blue;
+    text-align: flex-end;
+    margin-top: 50px;
+}
+
+footer img{
+    margin-top: 10px;
+    height: 60px;
+    width: 60px;
+}
+
+footer img:hover{
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255))
+}
